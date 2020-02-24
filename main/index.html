@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="../autocomplete.js">
+  </script>
+</head>
+<body>
+  <form class="search">
+    <div id="autocomp">
+      <input  id="input" class="input" type="text"/>
+      <div id="autocomplete">
+      </div>
+    </div>
+    <input   class="submit"type="submit"/>
+  </form>
+</body>
+<script>
+$(document).ready(function(){
+ var data=  ["January","February","March","April","May","June","July","August","September","October","November","December"];// data 
+ var elementsContainer= document.getElementById('autocomplete');// provide the container to display the whole suggestions
+  autocomp.autocomplete(elementsContainer, data,document.getElementById('input'));
+
+});
+
+</script>
+
+</html>
